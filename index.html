@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kuboferma-publisher</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 42rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #1f2328; background: #fff; }
+  h1 { font-size: 1.8rem; margin-bottom: .25rem; }
+  .muted { color: #59636e; }
+  a { color: #0969da; }
+  @media (prefers-color-scheme: dark) { body { color: #e6edf3; background: #0d1117; } .muted { color: #9198a1; } a { color: #4493f8; } }
+</style>
+</head>
+<body>
+<h1>kuboferma-publisher</h1>
+<p class="muted">A private publishing tool for the «Кубоферма» YouTube channel.</p>
+
+<p>kuboferma-publisher is a small self-hosted service used only by the owner of the «Кубоферма» channel.
+It sends newly produced short animated videos to the owner for review in Telegram and, after the owner
+approves a video, uploads it to the owner's own YouTube channel with a scheduled publish time.</p>
+
+<h2>What it does with YouTube</h2>
+<ul>
+  <li>Uploads videos approved by the channel owner to the owner's channel (YouTube Data API <code>videos.insert</code>).</li>
+  <li>Sets or changes the visibility and scheduled publish time of those videos (<code>videos.update</code>).</li>
+  <li>Reads the status and public statistics (views, likes, comments) of the channel's own videos.</li>
+</ul>
+
+<p>The app is not offered to other users. It acts only on the channel of the Google account that authorized it.</p>
+
+<p><a href="privacy.html">Privacy Policy</a> · Contact: <a href="mailto:noppstudio@gmail.com">noppstudio@gmail.com</a></p>
+</body>
+</html>
